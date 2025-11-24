@@ -1,4 +1,4 @@
-ascii/
+src/ascii/
 plan.md
 .env
 src/__pycache__/

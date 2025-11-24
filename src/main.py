@@ -1,15 +1,14 @@
 from user_prompt import get_keylist, select_difficulty, select_random_key, key_to_art
+from ascii.ascii_characters import ascii_characters
 
 def main():
     print("Welcome to type-it! Press the correct key/button when prompted to score.\n")
     difficulty = select_difficulty()
     keylist = get_keylist(difficulty)
-    print(keylist)
     key = select_random_key(difficulty)
-    print(key)
-    ascii_key = key_to_art(key)
-    print(ascii_key)
-#TODO:use library to make ascii gen function - maybe art? on pypi
+    print(difficulty,keylist,key)
+    print(ascii_characters[key])
+
     # open window
     # prompt user to start
     #display high_score
