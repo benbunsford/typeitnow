@@ -1,8 +1,10 @@
 from user_prompt import get_keylist, select_difficulty, select_random_key, key_to_art
 from ascii.ascii_characters import ascii_characters
+from ascii_gen import ascii_gen, character_list
 
 def main():
     print("Welcome to type-it! Press the correct key/button when prompted to score.\n")
+    ascii_gen(character_list)
     difficulty = select_difficulty()
     keylist = get_keylist(difficulty)
     key = select_random_key(difficulty)
