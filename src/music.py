@@ -36,7 +36,7 @@ class MusicPlayer:
                 self.fs.program_change(msg.channel, msg.program)
 
     def speed_up(self):
-        self.speed *= 1.005
+        self.speed *= 1.0075
 
     def play_async(self):
         thread = threading.Thread(target=self.play, daemon=True)

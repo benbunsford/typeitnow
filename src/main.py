@@ -29,13 +29,14 @@ def main():
 """
     )
     score = 0
-    timer_length = 5
+    timer_length = 6
     with TerminalManager():
         while True:
             key = select_random_key(difficulty)
             ascii_key = key_to_art(key)
             print(ascii_key)
             print("..................................")
+            print(f"Timer: {round(timer_length, 2)}s")
 
             # key_reader = KeyReader(timer_length)
             # pressed_key = key_reader.read_key_async()
@@ -48,7 +49,8 @@ def main():
             if pressed_key == key:
                 score += 1
                 player.speed_up()
-                timer_length -= .05
+                if timer_length > 1.5:
+                    timer_length -= .05
             elif pressed_key == '':
                 pressed_key = "NOTHING"
                 game_over(key, pressed_key, score)
