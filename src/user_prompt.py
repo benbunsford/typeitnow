@@ -1,7 +1,7 @@
 from enum import Enum
 import random
 
-from ascii_characters import ascii_characters
+from ascii.ascii_characters import ascii_characters
 
 
 class Difficulty(Enum):
