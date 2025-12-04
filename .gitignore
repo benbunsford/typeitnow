@@ -1,5 +1,5 @@
 .env
 src/__pycache__/
-src/music/undertale.sf2
+src/type-it/music/undertale.sf2
 ascii/__pycache__/
 __pycache__/

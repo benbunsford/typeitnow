@@ -2,21 +2,25 @@ import fluidsynth
 from mido import MidiFile
 import time
 import threading
+from pathlib import Path
 
-sound_font = "music/undertale.sf2"
-song = "music/type-it.mid"
+cwd = Path.cwd()
+sound_font_path = cwd / 'music' / 'undertale.sf2'
+sound_font_path.resolve()
+song_path = cwd / 'music' / 'type-it.mid'
+song_path.resolve()
 
 class MusicPlayer:
     def __init__(self):
         self.fs = fluidsynth.Synth()
         self.fs.start()
-        self.sfid = self.fs.sfload(sound_font)
+        self.sfid = self.fs.sfload(str(sound_font_path))
         self.fs.program_select(0, self.sfid, 0, 0)
         self.speed = 1.0
         self._stop_flag = False
 
     def play(self):
-        mid = MidiFile(song)
+        mid = MidiFile(song_path)
         self._stop_flag = False
 
         for msg in mid:
