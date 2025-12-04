@@ -10,7 +10,7 @@ class Difficulty(Enum):
     MEDIUM = 2
     HARD = 3
     SUPER_HARD = 4
-    IMPOSSIBLE = 5
+    UNREASONABLE = 5
 
 #TODO: Figure out keylists for each difficulty.
 def get_keylist(difficulty) -> list:
@@ -23,7 +23,7 @@ def get_keylist(difficulty) -> list:
             return medium_words
         case Difficulty.SUPER_HARD:
             return medium_words + long_words
-        case Difficulty.IMPOSSIBLE:
+        case Difficulty.UNREASONABLE:
             return long_words
         case _:
             raise Exception("Error getting keylist: No valid difficulty selected.")
@@ -41,7 +41,7 @@ def select_difficulty() -> Enum:
     print(" [2] Medium")
     print(" [3] Hard")
     print(" [4] Super Hard")
-    print(" [5] Impossible")
+    print(" [5] Unreasonable")
 
     difficulty = None
     while difficulty is None:
