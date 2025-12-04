@@ -1,3 +1,7 @@
+[build-system]
+build-backend = 'hatchling.build'
+requires = ['hatchling']
+
 [project]
 name = "typeitnow"
 version = "0.1.1"
@@ -11,6 +15,14 @@ dependencies = [
     "pathlib>=1.0.1",
     "pyfluidsynth>=1.3.4",
 ]
+
 [project.scripts]
 typeitnow = "typeitnow.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/typeitnow"]
+include = [
+    "src/typeitnow/music/",
+    "src/typeitnow/ascii/",
+]
 

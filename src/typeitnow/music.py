@@ -4,11 +4,9 @@ import time
 import threading
 from pathlib import Path
 
-cwd = Path.cwd()
-sound_font_path = cwd / 'music' / 'undertale.sf2'
-sound_font_path.resolve()
-song_path = cwd / 'music' / 'type-it.mid'
-song_path.resolve()
+package_path = Path(__file__).parent
+sound_font_path = package_path / 'music' / 'undertale.sf2'
+song_path = package_path / 'music' / 'type-it.mid'
 
 class MusicPlayer:
     def __init__(self):

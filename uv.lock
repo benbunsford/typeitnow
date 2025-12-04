@@ -116,7 +116,7 @@ wheels = [
 [[package]]
 name = "typeitnow"
 version = "0.1.1"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "art" },
     { name = "inputimeout" },
