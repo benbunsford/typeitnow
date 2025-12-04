@@ -22,16 +22,21 @@ but has not been tested.
 to install it here: [FluidSynth Download](https://github.com/FluidSynth/fluidsynth/wiki/Download)
 2. Install type-it with pip.
 
-```sh
-pip install type-it
-
-```
+    ```sh
+    pip install type-it
+    ```
 
 3. Add the .sf2 file so the audio sounds right.
-    - Download here: [Undertale sf2]()
+    - Download `undertale.sf2` from the latest Github Release page in this
+repository - [release page](https://github.com/benbunsford/type-it/releases/tag/v0.1.0-alpha)
     - Put it in `type-it/src/music`
+4. Run type-it in your terminal.
+
+    ```sh
+    type-it
+    ```
 
 ## TODO
 
--add high score
--re-implement single-key mode
+- add high score tracking
+- re-implement single-key mode
