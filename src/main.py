@@ -36,9 +36,6 @@ def main():
         print("..................................")
         print(f"Timer: {round(timer_length, 2)}s")
 
-        # key_reader = KeyReader(timer_length)
-        # pressed_key = key_reader.read_key_async()
-
         try:
             pressed_key = inputimeout(prompt='', timeout=timer_length)
         except TimeoutOccurred:
