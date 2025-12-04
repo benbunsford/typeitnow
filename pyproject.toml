@@ -1,5 +1,5 @@
 [project]
-name = "type-it"
+name = "typeitnow"
 version = "0.1.0"
 description = "A terminal-based typing game inspired by bop it."
 readme = "README.md"
@@ -12,5 +12,5 @@ dependencies = [
     "pyfluidsynth>=1.3.4",
 ]
 [project.scripts]
-type-it = "type-it.main:main"
+type-it = "typeitnow.main:main"
 
