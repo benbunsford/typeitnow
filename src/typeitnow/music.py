@@ -3,16 +3,16 @@ from mido import MidiFile
 import time
 import threading
 from pathlib import Path
+from .sf2_download import sf2_path
 
 package_path = Path(__file__).parent
-sound_font_path = package_path / 'music' / 'undertale.sf2'
 song_path = package_path / 'music' / 'type-it.mid'
 
 class MusicPlayer:
     def __init__(self):
         self.fs = fluidsynth.Synth()
         self.fs.start()
-        self.sfid = self.fs.sfload(str(sound_font_path))
+        self.sfid = self.fs.sfload(str(sf2_path))
         self.fs.program_select(0, self.sfid, 0, 0)
         self.speed = 1.0
         self._stop_flag = False

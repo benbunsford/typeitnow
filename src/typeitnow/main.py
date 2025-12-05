@@ -1,21 +1,22 @@
 from .user_prompt import select_difficulty, select_random_key, key_to_art
 from .music import MusicPlayer
 from .game_over import game_over
+from .sf2_download import get_sf2
 import sys
 from inputimeout import inputimeout,TimeoutOccurred
 import time
 
 def main():
     print("Welcome to type-it! Press the correct key/button when prompted to score.\n")
-
+    get_sf2()
     difficulty = select_difficulty()
 
     print("3...")
-    time.sleep(.25)
+    time.sleep(.2)
     print("2...")
-    time.sleep(.25)
+    time.sleep(.2)
     print("1...")
-    time.sleep(.25)
+    time.sleep(.2)
 
     player = MusicPlayer()
     player.play_async()
